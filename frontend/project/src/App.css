@@ -1,0 +1,90 @@
+/* General styles for the body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Light background for contrast */
+  color: #333; /* Dark text for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Center the main container */
+div {
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff; /* White background for contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better focus */
+  border-radius: 10px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Title and headers */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #4a2c2a; /* Dark brown */
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a33929; /* Red-brown */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  background-color: #fff; /* White background for table */
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #df0f00; /* Dark brown */
+  color: #fff; /* White text */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light grey for alternate rows */
+}
+
+tr:hover {
+  background-color: #ddd; /* Slightly darker grey on hover */
+}
+
+/* Button styles */
+button {
+  background-color: #cf0000; /* Dark brown */
+  color: #fff; /* White text */
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #de0f00; /* Darker brown for hover */
+}
+
+/* Loading text */
+p {
+  text-align: center;
+  font-size: 1.2em;
+  color: #777; /* Subtle grey for loading text */
+}

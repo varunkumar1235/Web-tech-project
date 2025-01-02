@@ -1,0 +1,39 @@
+// Import the MySQL module
+const mysql = require("mysql2");
+
+// Create a connection to the MySQL server
+const connection = mysql.createConnection({
+  host: "localhost", // Replace with your MySQL server host (e.g., localhost)
+  user: "root", // Replace with your MySQL username
+  password: "", // Replace with your MySQL password
+});
+
+// Connect to the MySQL server
+connection.connect((err) => {
+  if (err) {
+    console.error("Error connecting to the MySQL server:", err.message);
+    return;
+  }
+  console.log("Connected to the MySQL server.");
+
+  // Create the wt_cp database
+  const createDbQuery = "CREATE DATABASE IF NOT EXISTS wt_cp";
+
+  connection.query(createDbQuery, (err, result) => {
+    if (err) {
+      console.error("Error creating database:", err.message);
+      connection.end();
+      return;
+    }
+    console.log("Database wt_cp created or already exists.");
+
+    // Close the connection
+    connection.end((err) => {
+      if (err) {
+        console.error("Error closing the connection:", err.message);
+        return;
+      }
+      console.log("Connection closed.");
+    });
+  });
+});
